@@ -1,0 +1,7 @@
+config/index.json
+.directory
+node_modules
+TODO.md
+.vscode
+key/private.key
+key/public.key
