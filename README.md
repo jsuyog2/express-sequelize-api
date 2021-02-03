@@ -92,8 +92,12 @@ npm start
 URLs used for Login, Registration, and Verify USER in API.
 
 ##### Register:
+
 **POST**: http://127.0.0.1:8000/register
+
 **Body**:
+
+```
 email: String
 password: String
 cpassword: String
@@ -102,37 +106,65 @@ lname: String
 username: String
 contactNo: String
 tcCheck: Boolean
+```
 
 ##### Login:
+
 **POST**: http://127.0.0.1:8000/login
+
 **Body**:
+
+```
 email: String
 password: String
+```
 
 ##### Verification:
-**GET**: http://127.0.0.1:8000/verify?access_token=temp_access_token
-**Params**:
-access_token: String
 
-##### ReVerification:
-**GET**: http://127.0.0.1:8000/reverify?access_token=temp_access_token
+**GET**: http://127.0.0.1:8000/verify?access_token=temp_access_token
+
 **Params**:
+
+```
 access_token: String
+```
+##### ReVerification:
+
+**GET**: http://127.0.0.1:8000/reverify?access_token=temp_access_token
+
+**Params**:
+
+```
+access_token: String
+```
 
 ##### Forgot Password:
-**POST**: http://127.0.0.1:8000/forgotpassword
-**Body**:
-email: String
 
+**POST**: http://127.0.0.1:8000/forgotpassword
+
+**Body**:
+
+```
+email: String
+```
 ##### Change Password:
 **POST**: http://127.0.0.1:8000/changepassword?access_token=temp_access_token
+
 **Params**:
-access_token: String
+
+``` access_token: String ```
+
 **Body**:
+```
 password: String
 cpassword: String
+```
 
 ##### User Response:
 **GET**: http://127.0.0.1:8000/userresponse?access_token=temp_access_token
+
 **Params**:
+
+```
 access_token: String
+```
