@@ -2,7 +2,7 @@
 The Express PostgreSQL API is make a secure and reliable API use to Login, Registration and Verify USER.
 
 ## Getting started
-###Requirements
+### Requirements
 - [Node](https://nodejs.org/en/ "Node")
 - [PostgreSQL ](https://www.postgresql.org/ "PostgreSQL ")
 - [OpenSSL](https://wiki.openssl.org/index.php/Binaries "OpenSSL")
@@ -54,6 +54,8 @@ In this table is stored activity of the user when the user Login, make Registrat
 ### Generating keys using OpenSSL
 
 Now you need to create Private and Public Key to generate a Token.
+
+For that first you need to create `Key` Folder in root
 
 1 .Generate an RSA private key, of size 2048, and output it to a file named private.key:
 ```shell
