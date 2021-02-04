@@ -89,3 +89,52 @@ Add your Postgres connection information to config/index.json.txt and rename it 
 ```shell
 npm start
 ```
+
+## Architecture
+
+### Due credit
+
+The real credit for this project goes to the great folks behind the following open source softwares and modules:
+
+#### Softwares
+- [PostgreSQL](https://www.postgresql.org/ "PostgreSQL")
+- [OpenSSL](https://wiki.openssl.org/index.php/Binaries "OpenSSL")
+- [Express](https://expressjs.com/ "Express")
+- [JWT Token](https://jwt.io/ "JWT Token")
+
+### How it works
+
+The core of the project is [Express](https://expressjs.com/ "Express").
+
+> Express.js, or simply Express, is a back end web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js.
+
+All routes are stored in the `routes` folder and are automatically loaded on start. Check out the [routes readme](routes/README.md) for more information.
+
+[OpenSSL](https://wiki.openssl.org/index.php/Binaries "OpenSSL") is used for the generation of private and public keys.
+
+> OpenSSL is a software library for applications that secure communications over computer networks against eavesdropping or need to identify the party at the other end. It is widely used by Internet servers, including the majority of HTTPS websites.
+
+OpenSSL is using to encrypt JWT Temporary Token. For generation of keys read documentation [Generating keys using OpenSSL](https://github.com/jsuyog2/express-postgresql-api#generating-keys-using-openssl "Generating keys using OpenSSL").
+
+Data securely transmitting information using [JWT Token](https://jwt.io/ "JWT Token")
+
+> JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+
+Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. JWT Token is secured using public/private key pairs.
+
+#### Modules
+- [pbkdf2-password](https://www.npmjs.com/package/pbkdf2-password "pbkdf2-password")
+- [NODEMAILER](https://nodemailer.com/about/ "NODEMAILER")
+- [request-ip](https://www.npmjs.com/package/request-ip "request-ip")
+
+Password is secure and hashed using [pbkdf2-password](https://www.npmjs.com/package/pbkdf2-password "pbkdf2-password")
+
+> Easy salt/password creation for Node.js.
+
+Sends a mail to user for verification or change password using [NODEMAILER](https://nodemailer.com/about/ "NODEMAILER").
+
+> Nodemailer is a module for Node.js applications to allow easy as cake email sending.
+
+Retrieving IP address of user for encryption Login JWT Token using [request-ip](https://www.npmjs.com/package/request-ip "request-ip").
+
+> A tiny Node.js module for retrieving a request's IP address.
