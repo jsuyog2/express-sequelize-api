@@ -43,7 +43,7 @@ const errors = require('../config/errors.json');
 const fun = require('../modules/functions');
 ```
 
-This two modules is required in every route for [errors](https://github.com/jsuyog2/MapDataLABAPI/blob/master/config/README.md "errors") and some [functions](https://github.com/jsuyog2/MapDataLABAPI/blob/master/modules/README.md "functions").
+This two modules is required in every route for [errors](https://github.com/jsuyog2/express-postgresql-api/blob/master/config/README.md "errors") and some [functions](https://github.com/jsuyog2/express-postgresql-api/blob/master/modules/README.md "functions").
 
 ##### SQL
 ```
