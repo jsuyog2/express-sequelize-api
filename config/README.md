@@ -65,3 +65,8 @@ For example:
 
 #### password
 `password` SMTP password
+
+# Error Handling
+
+### error.json
+`error.json` is json file that contains all the error messages.
