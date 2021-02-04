@@ -10,10 +10,10 @@
     "jwt_temp_algo": "",
     "baseUrl":"http://127.0.0.1:8000/",
     "mail": {
-        "host": 'smtp.gmail.com',
+        "host": "smtp.gmail.com",
         "port": 465,
-        "username": '',
-        "password": ''
+        "username": "",
+        "password": ""
     }
 }
 ```

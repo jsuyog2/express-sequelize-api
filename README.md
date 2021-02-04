@@ -163,7 +163,7 @@ cpassword: String
 ```
 
 ##### User Response:
-**GET**: http://127.0.0.1:8000/userresponse?access_token=temp_access_token
+**GET**: http://127.0.0.1:8000/userresponse?access_token=login_access_token
 
 **Params**:
 
