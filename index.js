@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+var cors = require('cors');
 const {
     Pool,
     Client
@@ -11,7 +12,8 @@ const port = config.port;
 
 // create application/json parser
 app.use(bodyParser.urlencoded({
-    extended: false
+    extended: false,
+    limit: '500mb'
 }));
 
 
@@ -26,7 +28,28 @@ const client = new Client({
 client.connect()
 app.set('client', client);
 
+//cors
+const allowlist = config.corsAllowList;
 
+const corsOptionsDelegate = (req, callback) => {
+    let corsOptions;
+
+    let isDomainAllowed = allowlist.indexOf(req.header('Origin')) !== -1;
+
+    if (isDomainAllowed) {
+        // Enable CORS for this request
+        corsOptions = {
+            origin: true
+        }
+    } else {
+        // Disable CORS for this request
+        corsOptions = {
+            origin: false
+        }
+    }
+    callback(null, corsOptions)
+}
+app.use(cors(corsOptionsDelegate))
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`)
