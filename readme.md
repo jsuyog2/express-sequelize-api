@@ -39,7 +39,7 @@ Welcome to the **Express PostgreSQL API** repository! This project is a robust a
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Coverage](https://img.shields.io/gitlab/pipeline-coverage/jsuyog2/express-postgresql-api)
+![Coverage](https://img.shields.io/codecov/c/github/jsuyog2/express-postgresql-api)
 
 ![Version](https://img.shields.io/github/package-json/v/jsuyog2/express-postgresql-api.svg)
 
