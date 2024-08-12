@@ -21,6 +21,7 @@
  */
 
 require('dotenv').config();
+const fs = require('fs');
 const httpMocks = require('node-mocks-http');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -40,13 +41,16 @@ jest.mock('../utils/emailService');
 describe('Auth Controller', () => {
 
     let req, res;
-
+    const orignalFs = fs.readFileSync
     beforeEach(() => {
+        const mockPublicKey = 'mockPublicKeyContent';
+        fs.readFileSync = jest.fn().mockResolvedValue(mockPublicKey)
         req = httpMocks.createRequest();
         res = httpMocks.createResponse();
     });
 
     afterEach(() => {
+        fs.readFileSync = orignalFs;
         jest.clearAllMocks();
     });
 

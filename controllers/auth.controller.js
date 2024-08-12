@@ -16,9 +16,7 @@ const jwt_config = require('./../config/jwt.config');
 const config = require('./../config/config');
 const sendVerificationEmail = require('../utils/emailService');
 
-// Load private key for signing JWT
-const privateKeyPath = path.resolve(jwt_config.privateKeyPath);
-const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
+
 
 /**
  * @function login
@@ -49,6 +47,10 @@ exports.login = async (req, res) => {
         if (!isMatch) {
             return res.status(401).json({ message: 'Invalid username or password' });
         }
+
+        // Load private key for signing JWT
+        const privateKeyPath = path.resolve(jwt_config.privateKeyPath);
+        const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
 
         // Generate JWT token
         const token = jwt.sign(

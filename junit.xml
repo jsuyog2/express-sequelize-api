@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="59" failures="0" errors="0" time="2.863">
+  <testsuite name="User Controller" errors="0" failures="0" skipped="0" timestamp="2024-08-12T12:50:48" time="1.561" tests="11">
+    <testcase classname="User Controller GET /user should retrieve user details successfully" name="User Controller GET /user should retrieve user details successfully" time="0.075">
+    </testcase>
+    <testcase classname="User Controller GET /user should return 404 if user not found" name="User Controller GET /user should return 404 if user not found" time="0.109">
+    </testcase>
+    <testcase classname="User Controller GET /user should handle server errors" name="User Controller GET /user should handle server errors" time="0.096">
+    </testcase>
+    <testcase classname="User Controller PUT /user should update user details successfully" name="User Controller PUT /user should update user details successfully" time="0.072">
+    </testcase>
+    <testcase classname="User Controller PUT /user should update other user details successfully" name="User Controller PUT /user should update other user details successfully" time="0.066">
+    </testcase>
+    <testcase classname="User Controller PUT /user should return 404 if user not found when updating user" name="User Controller PUT /user should return 404 if user not found when updating user" time="0.069">
+    </testcase>
+    <testcase classname="User Controller PUT /user should handle server errors when updating user" name="User Controller PUT /user should handle server errors when updating user" time="0.066">
+    </testcase>
+    <testcase classname="User Controller POST /user/change-password should change the password successfully" name="User Controller POST /user/change-password should change the password successfully" time="0.067">
+    </testcase>
+    <testcase classname="User Controller POST /user/change-password should return 400 if the current password is incorrect" name="User Controller POST /user/change-password should return 400 if the current password is incorrect" time="0.066">
+    </testcase>
+    <testcase classname="User Controller POST /user/change-password should return 404 if user not found when changing password" name="User Controller POST /user/change-password should return 404 if user not found when changing password" time="0.065">
+    </testcase>
+    <testcase classname="User Controller POST /user/change-password should handle server errors when changing password" name="User Controller POST /user/change-password should handle server errors when changing password" time="0.064">
+    </testcase>
+  </testsuite>
+  <testsuite name="Auth Controller" errors="0" failures="0" skipped="0" timestamp="2024-08-12T12:50:49" time="0.427" tests="24">
+    <testcase classname="Auth Controller login should return a token on successful login" name="Auth Controller login should return a token on successful login" time="0.003">
+    </testcase>
+    <testcase classname="Auth Controller login should return 400 if username or password is missing" name="Auth Controller login should return 400 if username or password is missing" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller login should return 401 if user is not found" name="Auth Controller login should return 401 if user is not found" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller login should return 401 if password does not match" name="Auth Controller login should return 401 if password does not match" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller login should return 500 on server error" name="Auth Controller login should return 500 on server error" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller signup should register a new user and send verification email" name="Auth Controller signup should register a new user and send verification email" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller signup should return 400 if user already exists" name="Auth Controller signup should return 400 if user already exists" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller signup should return 500 on server error during signup" name="Auth Controller signup should return 500 on server error during signup" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller resendVerificationEmail should resend verification email successfully" name="Auth Controller resendVerificationEmail should resend verification email successfully" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller resendVerificationEmail should return 404 if user is not found" name="Auth Controller resendVerificationEmail should return 404 if user is not found" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller resendVerificationEmail should return 400 if user is already verified" name="Auth Controller resendVerificationEmail should return 400 if user is already verified" time="0.007">
+    </testcase>
+    <testcase classname="Auth Controller resendVerificationEmail should return 500 on server error during resend verification email" name="Auth Controller resendVerificationEmail should return 500 on server error during resend verification email" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller verification should verify user successfully" name="Auth Controller verification should verify user successfully" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller verification should return 400 for invalid or expired verification link" name="Auth Controller verification should return 400 for invalid or expired verification link" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller verification should return 400 for invalid verification link if user not found" name="Auth Controller verification should return 400 for invalid verification link if user not found" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller verifyUser should return user authentication status" name="Auth Controller verifyUser should return user authentication status" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller forgotPassword should send password reset link successfully" name="Auth Controller forgotPassword should send password reset link successfully" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller forgotPassword should return 404 if user is not found" name="Auth Controller forgotPassword should return 404 if user is not found" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller forgotPassword should return 500 on server error during forgot password" name="Auth Controller forgotPassword should return 500 on server error during forgot password" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller resetPassword should reset password successfully" name="Auth Controller resetPassword should reset password successfully" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller resetPassword should return 400 for invalid or expired token" name="Auth Controller resetPassword should return 400 for invalid or expired token" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller resetPassword should return 400 for invalid token if user not found" name="Auth Controller resetPassword should return 400 for invalid token if user not found" time="0.002">
+    </testcase>
+    <testcase classname="Auth Controller logout should log out successfully" name="Auth Controller logout should log out successfully" time="0.001">
+    </testcase>
+    <testcase classname="Auth Controller logout should return 500 on server error during logout" name="Auth Controller logout should return 500 on server error during logout" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="verifyToken Middleware" errors="0" failures="0" skipped="0" timestamp="2024-08-12T12:50:50" time="0.44" tests="15">
+    <testcase classname="verifyToken Middleware should return 401 if no token is provided" name="verifyToken Middleware should return 401 if no token is provided" time="0.016">
+    </testcase>
+    <testcase classname="verifyToken Middleware should return 401 if the token is invalid" name="verifyToken Middleware should return 401 if the token is invalid" time="0.006">
+    </testcase>
+    <testcase classname="verifyToken Middleware should return 401 if the token is missing required user information" name="verifyToken Middleware should return 401 if the token is missing required user information" time="0.015">
+    </testcase>
+    <testcase classname="verifyToken Middleware should return 401 if the token is blacklisted" name="verifyToken Middleware should return 401 if the token is blacklisted" time="0.015">
+    </testcase>
+    <testcase classname="verifyToken Middleware should return 401 if the user is not found" name="verifyToken Middleware should return 401 if the user is not found" time="0.016">
+    </testcase>
+    <testcase classname="verifyToken Middleware should attach user info to req and call next() if the token is valid and user is found" name="verifyToken Middleware should attach user info to req and call next() if the token is valid and user is found" time="0.015">
+    </testcase>
+    <testcase classname="verifyToken Middleware should handle token verification failure gracefully" name="verifyToken Middleware should handle token verification failure gracefully" time="0.016">
+    </testcase>
+    <testcase classname="logger Middleware should log the request details to the database" name="logger Middleware should log the request details to the database" time="0.002">
+    </testcase>
+    <testcase classname="logger Middleware should handle logging failure gracefully" name="logger Middleware should handle logging failure gracefully" time="0.014">
+    </testcase>
+    <testcase classname="logger Middleware should log the request with null userId if req.user is not defined" name="logger Middleware should log the request with null userId if req.user is not defined" time="0.016">
+    </testcase>
+    <testcase classname="roleAuthorization Middleware should allow access if the user has the required role" name="roleAuthorization Middleware should allow access if the user has the required role" time="0.002">
+    </testcase>
+    <testcase classname="roleAuthorization Middleware should deny access if the user does not have the required role" name="roleAuthorization Middleware should deny access if the user does not have the required role" time="0.002">
+    </testcase>
+    <testcase classname="roleAuthorization Middleware should deny access if req.user.role is undefined or empty" name="roleAuthorization Middleware should deny access if req.user.role is undefined or empty" time="0.003">
+    </testcase>
+    <testcase classname="validationErrorHandler Middleware should return 400 if validation errors are present" name="validationErrorHandler Middleware should return 400 if validation errors are present" time="0.003">
+    </testcase>
+    <testcase classname="validationErrorHandler Middleware should call next() if no validation errors are present" name="validationErrorHandler Middleware should call next() if no validation errors are present" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Role Controller" errors="0" failures="0" skipped="0" timestamp="2024-08-12T12:50:50" time="0.17" tests="7">
+    <testcase classname="Role Controller POST /role should create a new role successfully" name="Role Controller POST /role should create a new role successfully" time="0.002">
+    </testcase>
+    <testcase classname="Role Controller POST /role should handle errors when creating a role" name="Role Controller POST /role should handle errors when creating a role" time="0.001">
+    </testcase>
+    <testcase classname="Role Controller POST /role/assign should assign a role to a user successfully" name="Role Controller POST /role/assign should assign a role to a user successfully" time="0.001">
+    </testcase>
+    <testcase classname="Role Controller POST /role/assign should handle errors when assigning a role" name="Role Controller POST /role/assign should handle errors when assigning a role" time="0.001">
+    </testcase>
+    <testcase classname="Role Controller GET /user/:userId/roles should get user roles successfully" name="Role Controller GET /user/:userId/roles should get user roles successfully" time="0.001">
+    </testcase>
+    <testcase classname="Role Controller GET /user/:userId/roles should handle user not found error" name="Role Controller GET /user/:userId/roles should handle user not found error" time="0.001">
+    </testcase>
+    <testcase classname="Role Controller GET /user/:userId/roles should handle errors when fetching user roles" name="Role Controller GET /user/:userId/roles should handle errors when fetching user roles" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="sendVerificationEmail" errors="0" failures="0" skipped="0" timestamp="2024-08-12T12:50:50" time="0.096" tests="2">
+    <testcase classname="sendVerificationEmail should send a verification email successfully" name="sendVerificationEmail should send a verification email successfully" time="0.006">
+    </testcase>
+    <testcase classname="sendVerificationEmail should handle errors when sending email" name="sendVerificationEmail should handle errors when sending email" time="0.009">
+    </testcase>
+  </testsuite>
+</testsuites>

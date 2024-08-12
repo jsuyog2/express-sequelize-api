@@ -18,6 +18,7 @@
 
 
 require('dotenv').config();
+const fs = require('fs');
 const httpMocks = require('node-mocks-http');
 const { validationResult } = require('express-validator');
 const { verifyToken, logger, roleAuthorization, validationErrorHandler } = require('../middlewares'); // Adjust the path as needed
@@ -33,12 +34,18 @@ jest.mock('express-validator');
  */
 describe('verifyToken Middleware', () => {
     let req, res, next;
-
+    const orignalFs = fs.readFileSync
     beforeEach(() => {
+        const mockPublicKey = 'mockPublicKeyContent';
+        fs.readFileSync = jest.fn().mockResolvedValue(mockPublicKey)
         req = httpMocks.createRequest();
         res = httpMocks.createResponse();
         next = jest.fn();
     });
+
+    afterEach(() => {
+        fs.readFileSync = orignalFs;
+    })
 
     /**
      * @description Test case for handling scenario where no token is provided in the request.

@@ -2,6 +2,7 @@
 # Express PostgreSQL API
 
 Welcome to the **Express PostgreSQL API** repository! This project is a robust and scalable RESTful API built using Express.js and PostgreSQL. It provides a clean and efficient backend solution for managing data and handling various API requests in a Node.js environment.
+
 ## Table of Contents
 
 - [Features](#features)
@@ -9,6 +10,7 @@ Welcome to the **Express PostgreSQL API** repository! This project is a robust a
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Build](#build)
 - [Environment Variables](#environment-variables)
 - [API Endpoints](#api-endpoints)
 - [Testing](#testing)
@@ -32,11 +34,14 @@ Welcome to the **Express PostgreSQL API** repository! This project is a robust a
 - **Logging Middleware**: Request logging for monitoring and debugging.
 - **Error Handling**: Comprehensive error handling for robust API performance.
 - **Unit Tests**: Includes unit tests for middleware and controller functions to ensure code reliability.
+
 ## Badges
+
+![Node.js CI](https://github.com/jsuyog2/express-postgresql-api/actions/workflows/node.js.yml/badge.svg)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Coverage](https://img.shields.io/codecov/c/github/jsuyog2/express-postgresql-api.svg)
+![Coverage](https://img.shields.io/codecov/c/github/jsuyog2/express-postgresql-api)
 
 ![Version](https://img.shields.io/github/package-json/v/jsuyog2/express-postgresql-api.svg)
 
@@ -74,14 +79,42 @@ To get started with this project, follow these steps:
 3. **Set Up Environment Variables**
 
 Create a .env file in the root directory of the project. Configure the environment variables as described in [Environment Variables](#environment-variables).
-   
+
 ## Usage
 
-To start the server, run:
+### Run Locally
+
+Start the server
 
 ```bash
-npm start
+  npm run start
 ```
+
+
+## Build
+
+To build the project using Webpack, use the following commands:
+
+### Production Build
+
+To create an optimized production build:
+
+```bash
+  npm run build
+```
+
+This command will generate the bundled files optimized for production in the `dist` directory.
+
+### Start the Server
+
+After building the project, you can start the server with:
+
+```bash
+  npm run prod
+```
+
+This command builds the project (if not already built) and then starts the server using the generated `bundle.js` file in the `dist` directory.
+
 ## Environment Variables
 
 To run this project, you need to configure the following environment variables in your `.env` file:
@@ -123,6 +156,25 @@ MAIL_PASSWORD=your_email_password
 ```
 
 Ensure that you replace the placeholder values with your actual configuration details.
+
+## Generating Keys Using OpenSSL
+
+Now you need to create Private and Public Key to generate a Token.
+
+1. **Generate an RSA private key, of size 2048, and output it to a file named `private.key`:**
+
+   ```bash
+   openssl genrsa -out key/private.key 2048
+   ```
+
+2. **Extract the public key from the key pair, which can be used in a certificate:**
+
+   ```bash
+   openssl rsa -in key/private.key -outform PEM -pubout -out key/public.key
+   ```
+
+   **Note:** Make sure both `key/private.key` and `key/public.key` are saved in the `key` folder.
+
 ## API Endpoints
 
 This section provides an overview of the available API endpoints for the application. For detailed request and response formats, refer to the [Postman Documentation](https://documenter.getpostman.com/view/30249900/2sA3s3Jrw9).
@@ -194,6 +246,7 @@ This section provides an overview of the available API endpoints for the applica
 ---
 
 For further details and examples, please refer to the [Postman Collection](https://documenter.getpostman.com/view/30249900/2sA3s3Jrw9).
+
 ## Testing
 
 To run the unit tests for the project, use:
@@ -343,6 +396,7 @@ Refer to the [Environment Variables](#environment-variables) section for details
 Yes, but make sure to set the `PRODUCTION` environment variable to `true` and properly configure your production environment settings in the `.env` file.
 
 If you have any other questions or need further assistance, feel free to reach out via [email](mailto:jsuyog2@gmail.com).
+
 ## Acknowledgements
 
 - **Express.js**: A fast, unopinionated, minimalist web framework for Node.js.
@@ -352,6 +406,7 @@ If you have any other questions or need further assistance, feel free to reach o
 - **express-validator**: A set of express.js middlewares for validation.
 - **dotenv**: A module to load environment variables from a `.env` file into `process.env`.
 - **Jest**: A delightful JavaScript testing framework with a focus on simplicity.
+
 ## Author
 
 This project is maintained by [Suyog Dinesh Jadhav](mailto:jsuyog2@gmail.com).
