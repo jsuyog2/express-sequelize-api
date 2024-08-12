@@ -10,7 +10,7 @@
         "build": "webpack",
         "lint": "eslint .",
         "prod": "node dist/bundle.js",
-        "test": "jest --detectOpenHandles --coverage"
+        "test": "jest --detectOpenHandles --coverage --reporters=jest-junit"
     },
     "repository": {
         "type": "git",
