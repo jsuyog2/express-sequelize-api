@@ -28,9 +28,6 @@ jobs:
 
     - run: npm ci
 
-    - name: Build with Webpack
-      run: npm run build
-
     - name: Run tests
       run: npm test
       env:
