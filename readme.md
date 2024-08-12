@@ -32,11 +32,14 @@ Welcome to the **Express PostgreSQL API** repository! This project is a robust a
 - **Logging Middleware**: Request logging for monitoring and debugging.
 - **Error Handling**: Comprehensive error handling for robust API performance.
 - **Unit Tests**: Includes unit tests for middleware and controller functions to ensure code reliability.
+
 ## Badges
+
+![Node.js CI](https://github.com/jsuyog2/express-postgresql-api/actions/workflows/node.js.yml/badge.svg)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Coverage](https://img.shields.io/codecov/c/github/jsuyog2/express-postgresql-api.svg)
+![Coverage](https://img.shields.io/gitlab/pipeline-coverage/jsuyog2/express-postgresql-api)
 
 ![Version](https://img.shields.io/github/package-json/v/jsuyog2/express-postgresql-api.svg)
 
