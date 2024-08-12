@@ -1,4 +1,9 @@
 const path = require('path');
+var fs = require('fs');
+var nodeModules = {};
+fs.readdirSync(path.resolve(__dirname, 'node_modules'))
+    .filter(x => ['.bin'].indexOf(x) === -1)
+    .forEach(mod => { nodeModules[mod] = `commonjs ${mod}`; });
 
 module.exports = {
     mode: 'production',
@@ -8,5 +13,6 @@ module.exports = {
         publicPath: '/',
         filename: 'final.js',
     },
+    externals: nodeModules,
     target: 'node',
 };

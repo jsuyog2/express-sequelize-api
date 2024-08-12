@@ -2,6 +2,7 @@
     "name": "express-postgresql-api",
     "version": "1.0.0",
     "description": "Welcome to the Express PostgreSQL API repository! This project is a robust and scalable RESTful API built using Express.js and PostgreSQL. It provides a clean and efficient backend solution for managing data and handling various API requests in a Node.js environment",
+    "main": "app.js",
     "private": true,
     "scripts": {
         "start": "node app.js",
@@ -15,8 +16,15 @@
         "type": "git",
         "url": "https://github.com/jsuyog2/express-postgresql-api"
     },
+    "engines": {
+        "node": ">=14.0.0"
+    },
     "keywords": [
-        "api"
+        "api",
+        "express",
+        "postgresql",
+        "node.js",
+        "backend"
     ],
     "author": "Suyog Jadhav",
     "license": "ISC",
@@ -37,7 +45,8 @@
         "pg-hstore": "^2.3.4",
         "sequelize": "^6.37.3",
         "swagger-jsdoc": "^6.2.8",
-        "swagger-ui-express": "^5.0.1"
+        "swagger-ui-express": "^5.0.1",
+        "webpack": "^5.93.0"
     },
     "devDependencies": {
         "@eslint/js": "^9.8.0",
@@ -48,7 +57,6 @@
         "node-mocks-http": "^1.15.1",
         "nodemailer-mock": "^2.0.6",
         "supertest": "^7.0.0",
-        "webpack": "^5.93.0",
         "webpack-cli": "^5.1.4"
     }
 }
