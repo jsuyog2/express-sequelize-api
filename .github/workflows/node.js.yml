@@ -26,6 +26,22 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: Install dependencies
+      run: npm install
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+      env:
+        PRODUCTION: false
+        BASE_URL: http://127.0.0.1:3000
+        PORT: 3000
+        CORS_LIST: http://localhost:4200
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        JWT_PUBLICKEY_PATH: ${{ secrets.JWT_PUBLICKEY_PATH }}
+        JWT_PRIVATEKEY_PATH: ${{ secrets.JWT_PRIVATEKEY_PATH }}
+        SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
+        PG_CONNECT: ${{ secrets.PG_CONNECT }}
+        MAIL_HOST: ${{ secrets.MAIL_HOST }}
+        MAIL_PORT: ${{ secrets.MAIL_PORT }}
+        MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+        MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
