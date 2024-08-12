@@ -35,9 +35,7 @@ const jwt = require('jsonwebtoken');
 const jwt_config = require('./../config/jwt.config');
 const db = require('../models');
 
-// Load public key
-const publicKeyPath = path.resolve(jwt_config.publicKeyPath);
-const publicKey = fs.readFileSync(publicKeyPath, 'utf8');
+
 
 /**
  * Middleware function to verify JWT tokens.
@@ -59,6 +57,9 @@ const verifyToken = async (req, res, next) => {
         return res.status(401).json({ message: 'No token provided' });
     }
 
+    // Load public key
+    const publicKeyPath = path.resolve(jwt_config.publicKeyPath);
+    const publicKey = fs.readFileSync(publicKeyPath, 'utf8');
 
     // Verify the token using the public key
     jwt.verify(token, publicKey, { algorithms: ['RS256'] }, async (err, decoded) => {
