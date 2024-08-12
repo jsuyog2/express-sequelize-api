@@ -9,6 +9,7 @@ Welcome to the **Express PostgreSQL API** repository! This project is a robust a
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Build](#build)
 - [Environment Variables](#environment-variables)
 - [API Endpoints](#api-endpoints)
 - [Testing](#testing)
@@ -77,14 +78,40 @@ To get started with this project, follow these steps:
 3. **Set Up Environment Variables**
 
 Create a .env file in the root directory of the project. Configure the environment variables as described in [Environment Variables](#environment-variables).
-   
 ## Usage
 
-To start the server, run:
+### Run Locally
+
+Start the server
 
 ```bash
-npm start
+  npm run start
 ```
+
+
+## Build
+
+To build the project using Webpack, use the following commands:
+
+### Production Build
+
+To create an optimized production build:
+
+```bash
+  npm run build
+```
+
+This command will generate the bundled files optimized for production in the `dist` directory.
+
+### Start the Server
+
+After building the project, you can start the server with:
+
+```bash
+  npm run prod
+```
+
+This command builds the project (if not already built) and then starts the server using the generated `bundle.js` file in the `dist` directory.
 ## Environment Variables
 
 To run this project, you need to configure the following environment variables in your `.env` file:

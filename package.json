@@ -9,7 +9,7 @@
         "start-dev": "nodemon app.js",
         "build": "webpack",
         "lint": "eslint .",
-        "prod": "node dist/final.js",
+        "prod": "node dist/bundle.js",
         "test": "jest --detectOpenHandles --coverage --reporters=jest-junit"
     },
     "repository": {
