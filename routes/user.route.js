@@ -26,7 +26,7 @@
  */
 const userController = require('../controllers/user.controller');
 const { verifyToken, validationErrorHandler } = require('../middlewares');
-const { validateForgotPassword, validateUserUpdate } = require('../middlewares/validators');
+const { validateUserUpdate, validateChangePassword } = require('../middlewares/validators');
 
 module.exports = function (app) {
     app.use(function (req, res, next) {
@@ -153,5 +153,5 @@ module.exports = function (app) {
      *       500:
      *         description: Internal server error
      */
-    app.post('/user/change-password', [verifyToken, validateForgotPassword, validationErrorHandler], userController.changePassword);
+    app.post('/user/change-password', [verifyToken, validateChangePassword, validationErrorHandler], userController.changePassword);
 };

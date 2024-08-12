@@ -36,7 +36,6 @@ app.use(logger);
 
 // Configure CORS
 const allowlist = config.corsAllowList?.split(',');
-console.log('test 1');
 if (allowlist) {
     const corsOptionsDelegate = (req, callback) => {
         let corsOptions;
@@ -55,7 +54,6 @@ if (allowlist) {
 
     app.use(cors(corsOptionsDelegate));
 } else {
-    console.log('test');
     app.use(cors());
 }
 
