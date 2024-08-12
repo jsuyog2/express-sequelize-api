@@ -2,9 +2,11 @@
     "name": "express-postgresql-api",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "nodemon app.js",
+        "lint": "eslint .",
+        "test": "jest --detectOpenHandles --coverage"
     },
     "repository": {
         "type": "git",
@@ -20,12 +22,27 @@
     },
     "homepage": "https://github.com/jsuyog2/express-postgresql-api#readme",
     "dependencies": {
+        "bcrypt": "^5.1.1",
         "cors": "^2.8.5",
-        "express": "^4.17.1",
-        "jsonwebtoken": "^8.5.1",
-        "nodemailer": "^6.4.17",
-        "pbkdf2-password": "^1.2.1",
-        "pg": "^8.5.1",
-        "request-ip": "^2.1.3"
+        "dotenv": "^16.4.5",
+        "eslint-plugin-jest": "^28.8.0",
+        "express": "^4.19.2",
+        "express-validator": "^7.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "nodemailer": "^6.9.14",
+        "pg": "^8.12.0",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.37.3",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.8.0",
+        "eslint": "^9.8.0",
+        "globals": "^15.9.0",
+        "jest": "^29.7.0",
+        "node-mocks-http": "^1.15.1",
+        "nodemailer-mock": "^2.0.6",
+        "supertest": "^7.0.0"
     }
 }
