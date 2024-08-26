@@ -42,7 +42,7 @@ jobs:
         JWT_PUBLICKEY_PATH: ${{ secrets.JWT_PUBLICKEY_PATH }}
         JWT_PRIVATEKEY_PATH: ${{ secrets.JWT_PRIVATEKEY_PATH }}
         SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
-        PG_CONNECT: ${{ secrets.PG_CONNECT }}
+        SEQUELIZE_CONNECT: ${{ secrets.SEQUELIZE_CONNECT }}
         MAIL_HOST: ${{ secrets.MAIL_HOST }}
         MAIL_PORT: ${{ secrets.MAIL_PORT }}
         MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
