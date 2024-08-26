@@ -1,7 +1,7 @@
 {
-    "name": "express-postgresql-api",
+    "name": "express-sequelize-api",
     "version": "1.0.0",
-    "description": "Welcome to the Express PostgreSQL API repository! This project is a robust and scalable RESTful API built using Express.js and PostgreSQL. It provides a clean and efficient backend solution for managing data and handling various API requests in a Node.js environment",
+    "description": "Welcome to the Express Sequelize API repository! This project is a robust and scalable RESTful API built using Express.js and Sequelize. It provides a clean and efficient backend solution for managing data and handling various API requests in a Node.js environment",
     "main": "app.js",
     "private": true,
     "scripts": {
@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jsuyog2/express-postgresql-api"
+        "url": "https://github.com/jsuyog2/express-sequelize-api"
     },
     "engines": {
         "node": ">=14.0.0"
@@ -22,16 +22,16 @@
     "keywords": [
         "api",
         "express",
-        "postgresql",
+        "sequelize",
         "node.js",
         "backend"
     ],
     "author": "Suyog Jadhav",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/jsuyog2/express-postgresql-api/issues"
+        "url": "https://github.com/jsuyog2/express-sequelize-api/issues"
     },
-    "homepage": "https://github.com/jsuyog2/express-postgresql-api#readme",
+    "homepage": "https://github.com/jsuyog2/express-sequelize-api#readme",
     "dependencies": {
         "bcrypt": "^5.1.1",
         "cors": "^2.8.5",
