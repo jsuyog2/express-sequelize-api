@@ -36,13 +36,13 @@ Welcome to the **Express Sequelize API** repository! This project is a robust an
 
 ## Badges
 
-![Node.js CI](https://github.com/jsuyog2/express-postgresql-api/actions/workflows/node.js.yml/badge.svg)
+![Node.js CI](https://github.com/jsuyog2/express-sequelize-api/actions/workflows/node.js.yml/badge.svg)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Coverage](https://img.shields.io/codecov/c/github/jsuyog2/express-postgresql-api)
+![Coverage](https://img.shields.io/codecov/c/github/jsuyog2/express-sequelize-api)
 
-![Version](https://img.shields.io/github/package-json/v/jsuyog2/express-postgresql-api.svg)
+![Version](https://img.shields.io/github/package-json/v/jsuyog2/express-sequelize-api.svg)
 
 ![Maintenance](https://img.shields.io/maintenance/yes/2024.svg)
 
@@ -63,8 +63,8 @@ To get started with this project, follow these steps:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/jsuyog2/express-postgresql-api.git
-   cd express-postgresql-api
+   git clone https://github.com/jsuyog2/express-sequelize-api.git
+   cd express-sequelize-api
    ```
 
 2. **Install Dependencies**
@@ -141,8 +141,8 @@ PORT=3000
 CORS_LIST=http://localhost:4200
 
 JWT_SECRET=api_secret_key
-JWT_PUBLICKEY_PATH=E:/Clouds/express-postgresql-api/key/public.key
-JWT_PRIVATEKEY_PATH=E:/Clouds/express-postgresql-api/key/private.key
+JWT_PUBLICKEY_PATH=./express-sequelize-api/key/public.key
+JWT_PRIVATEKEY_PATH=./express-sequelize-api/key/private.key
 
 SESSION_SECRET=api_session_secret
 
@@ -259,7 +259,7 @@ This command will execute all the tests defined in the `test` directory.
 
 ## Roadmap
 
-The roadmap outlines planned features and improvements for the Express PostgreSQL API project. We aim to continuously enhance the project based on user feedback and evolving requirements.
+The roadmap outlines planned features and improvements for the Express Sequelize API project. We aim to continuously enhance the project based on user feedback and evolving requirements.
 
 ### Planned Features
 
@@ -279,19 +279,19 @@ The roadmap outlines planned features and improvements for the Express PostgreSQ
 - **Advanced Analytics**: Incorporate analytics for monitoring API usage and performance metrics.
 ## Support
 
-If you encounter any issues or need assistance with the Express PostgreSQL API project, here are some ways you can get support:
+If you encounter any issues or need assistance with the Express Sequelize API project, here are some ways you can get support:
 
 - **Documentation**: Check the [Postman Collection](https://documenter.getpostman.com/view/30249900/2sA3s3Jrw9) and [README](#) for detailed information on API endpoints and usage.
 - **FAQ**: Review the Frequently Asked Questions (FAQ) section in the documentation for common queries and troubleshooting tips.
 - **Community Support**: Join discussions and ask questions on relevant forums or community channels.
 
-We appreciate your feedback and are committed to providing timely support to ensure the best experience with the Express PostgreSQL API project.
+We appreciate your feedback and are committed to providing timely support to ensure the best experience with the Express Sequelize API project.
 
 ## Feedback
 
-We welcome feedback on the Express PostgreSQL API project. If you have any suggestions, improvements, or issues, please let us know. You can provide feedback by:
+We welcome feedback on the Express Sequelize API project. If you have any suggestions, improvements, or issues, please let us know. You can provide feedback by:
 
-1. **Opening an Issue**: Report bugs, request features, or provide suggestions by creating a new issue in the [Issues](https://github.com/jsuyog2/express-postgresql-api/issues) section of this repository.
+1. **Opening an Issue**: Report bugs, request features, or provide suggestions by creating a new issue in the [Issues](https://github.com/jsuyog2/express-sequelize-api/issues) section of this repository.
 2. **Submitting a Pull Request**: If you have a solution or improvement, feel free to submit a pull request. Please ensure your changes adhere to the project's guidelines and standards.
 3. **Contacting the Author**: You can also directly reach out to the project maintainer, [Suyog Dinesh Jadhav](mailto:jsuyog2@gmail.com), with any feedback or questions.
 
@@ -318,8 +318,8 @@ To set up the project locally, follow these steps:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/jsuyog2/express-postgresql-api.git
-   cd express-postgresql-api
+   git clone https://github.com/jsuyog2/express-sequelize-api.git
+   cd express-sequelize-api
    ```
 
 2. **Install Dependencies**
@@ -349,10 +349,10 @@ This command will execute all tests defined in the `test` directory using Jest.
 If you encounter a bug, follow these steps:
 
 1. **Check Existing Issues**
-   Look at the [Issues](https://github.com/jsuyog2/express-postgresql-api/issues) on GitHub to see if the problem has already been reported.
+   Look at the [Issues](https://github.com/jsuyog2/express-sequelize-api/issues) on GitHub to see if the problem has already been reported.
 
 2. **Report a New Issue**
-   If your issue is not listed, create a [New Issue](https://github.com/jsuyog2/express-postgresql-api/issues/new) on GitHub. Provide a detailed description of the issue, including steps to reproduce it and any relevant screenshots or error logs.
+   If your issue is not listed, create a [New Issue](https://github.com/jsuyog2/express-sequelize-api/issues/new) on GitHub. Provide a detailed description of the issue, including steps to reproduce it and any relevant screenshots or error logs.
 
 ### 4. **How can I contribute to the project?**
 
@@ -360,7 +360,7 @@ Contributions are welcome! To contribute:
 
 1. **Fork the Repository**
    ```bash
-   git clone https://github.com/your-username/express-postgresql-api.git
+   git clone https://github.com/your-username/express-sequelize-api.git
    ```
 
 2. **Create a New Branch**
@@ -380,7 +380,7 @@ Contributions are welcome! To contribute:
    ```
 
 5. **Create a Pull Request**
-   Open a [Pull Request](https://github.com/jsuyog2/express-postgresql-api/pulls) on GitHub with a description of your changes.
+   Open a [Pull Request](https://github.com/jsuyog2/express-sequelize-api/pulls) on GitHub with a description of your changes.
 
 ### 5. **Where can I find the API documentation?**
 
