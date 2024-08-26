@@ -1,7 +1,6 @@
+# Express Sequelize API
 
-# Express PostgreSQL API
-
-Welcome to the **Express PostgreSQL API** repository! This project is a robust and scalable RESTful API built using Express.js and PostgreSQL. It provides a clean and efficient backend solution for managing data and handling various API requests in a Node.js environment.
+Welcome to the **Express Sequelize API** repository! This project is a robust and scalable RESTful API built using Express.js and Sequelize. It provides a clean and efficient backend solution for managing data and handling various API requests in a Node.js environment.
 
 ## Table of Contents
 
@@ -27,7 +26,7 @@ Welcome to the **Express PostgreSQL API** repository! This project is a robust a
 ## Features
 
 - **RESTful API**: Fully functional REST API endpoints for data management.
-- **PostgreSQL Integration**: Utilizes PostgreSQL for data storage with efficient querying.
+- **Sequelize Integration**: Utilizes Sequelize ORM for database management with efficient querying.
 - **JWT Authentication**: Secure endpoints with JSON Web Token (JWT) based authentication.
 - **Role-Based Access Control**: Manage user permissions with role-based access.
 - **Validation Middleware**: Validate incoming requests using express-validator.
@@ -50,7 +49,7 @@ Welcome to the **Express PostgreSQL API** repository! This project is a robust a
 ## Tech Stack
 
 - **Backend:** Node.js, Express.js
-- **Database:** PostgreSQL
+- **Database:** Sequelize (Supports various databases like PostgreSQL, MySQL, etc.)
 - **Authentication:** JWT
 - **Testing:** Jest
 - **Validation:** express-validator
@@ -127,7 +126,7 @@ To run this project, you need to configure the following environment variables i
 - **`JWT_PUBLICKEY_PATH`**: Path to the public key file for JWT verification.
 - **`JWT_PRIVATEKEY_PATH`**: Path to the private key file for JWT signing.
 - **`SESSION_SECRET`**: Secret key used for session management.
-- **`PG_CONNECT`**: Connection string for PostgreSQL database (e.g., `postgres://postgres:1234@localhost/pgtest`).
+- **`SEQUELIZE_CONNECT`**: Sequelize database connection string (e.g., `postgres://postgres:1234@localhost/pgtest`).
 - **`MAIL_HOST`**: SMTP server host for sending emails.
 - **`MAIL_PORT`**: SMTP server port for sending emails (e.g., `465`).
 - **`MAIL_USERNAME`**: SMTP server username.
@@ -147,7 +146,7 @@ JWT_PRIVATEKEY_PATH=E:/Clouds/express-postgresql-api/key/private.key
 
 SESSION_SECRET=api_session_secret
 
-PG_CONNECT=postgres://postgres:1234@localhost/pgtest
+SEQUELIZE_CONNECT=postgres://postgres:1234@localhost/pgtest
 
 MAIL_HOST=smtp.example.com
 MAIL_PORT=465
@@ -400,7 +399,7 @@ If you have any other questions or need further assistance, feel free to reach o
 ## Acknowledgements
 
 - **Express.js**: A fast, unopinionated, minimalist web framework for Node.js.
-- **PostgreSQL**: A powerful, open-source object-relational database system.
+- **Sequelize**: A promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server.
 - **jsonwebtoken**: A library for signing and verifying JSON Web Tokens.
 - **bcryptjs**: A library to hash and compare passwords securely.
 - **express-validator**: A set of express.js middlewares for validation.

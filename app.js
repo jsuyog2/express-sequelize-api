@@ -2,14 +2,14 @@
  * @file app.js
  * @description This file initializes and configures the Express server for the API.
  * 
- * The server uses environment variables, sets up middleware, handles CORS, and connects to the PostgreSQL database.
+ * The server uses environment variables, sets up middleware, handles CORS, and connects to the Sequelize database.
  * It also configures Swagger for API documentation and sets up routes for authentication, user management, and role management.
  * 
  * Key features:
  * 
  * - Initializes environment variables using dotenv.
  * - Sets up middleware for request parsing, logging, and CORS.
- * - Configures PostgreSQL database connection and synchronization.
+ * - Configures Sequelize database connection and synchronization.
  * - Sets up Swagger documentation.
  * - Defines API routes.
  * - Handles 404 errors for undefined routes.

@@ -23,7 +23,7 @@ const swaggerOptions = {
     swaggerDefinition: {
         openapi: '3.0.0',
         info: {
-            title: 'express-postgresql-api',
+            title: 'express-sequelize-api',
             version: '1.0.0',
             description: 'API Information',
             contact: {
