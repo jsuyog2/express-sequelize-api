@@ -46,7 +46,7 @@
         "sequelize": "^6.37.3",
         "swagger-jsdoc": "^6.2.8",
         "swagger-ui-express": "^5.0.1",
-        "webpack": "^5.93.0"
+        "webpack": "^5.94.0"
     },
     "devDependencies": {
         "@eslint/js": "^9.8.0",
