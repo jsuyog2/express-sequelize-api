@@ -1,6 +1,6 @@
 {
     "name": "express-sequelize-api",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Welcome to the Express Sequelize API repository! This project is a robust and scalable RESTful API built using Express.js and Sequelize. It provides a clean and efficient backend solution for managing data and handling various API requests in a Node.js environment",
     "main": "app.js",
     "private": true,
